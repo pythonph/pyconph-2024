@@ -1,6 +1,6 @@
 {% load wagtailcore_tags wagtailimages_tags %}
 
-<div>
+<div id="{{ content.slug }}">
     {% if content.is_subcontent %}
     <h3 class="text-24 md:text-32 text-white mb-20">
         {{ content.title}}

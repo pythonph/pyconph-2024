@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 from modelcluster.fields import ParentalKey
 from wagtail.admin.panels import FieldPanel, FieldRowPanel, InlinePanel, MultiFieldPanel
 from wagtail.fields import RichTextField
@@ -21,6 +22,10 @@ class PageContent(Orderable, models.Model):
     image = models.ForeignKey("wagtailimages.Image", on_delete=models.CASCADE)
     image_position = models.CharField(choices=ImagePositions.choices, max_length=32)
     is_subcontent = models.BooleanField(default=False)
+
+    @property
+    def slug(self):
+        return slugify(self.title)
 
 
 class HomePage(Page):
