@@ -28,12 +28,45 @@ h4 {
     display: none !important;
 }
 
-.keynote:hover {
-    pointer-events: none !important;
+.keynote-container {
+  padding: 1rem;
+  display: flex;
+  margin-left: 0px;
+  overflow-x: scroll;
 }
 
-.keynote {
-    pointer-events: none !important;
+@media only screen and (min-width: 768px) {
+  .keynote-container {
+    margin-left: -5rem;
+    overflow-x: visible;
+  }
+}
+
+.keynote-container div {
+  flex-direction: column;
+
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .keynote-container div {
+    margin: 0 2rem;
+  }
+}
+
+.keynote-img {
+  width: 298px;
+  height: 298px;
+  overflow: hidden;
+}
+
+.keynote-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .speaker .splide__arrows {
