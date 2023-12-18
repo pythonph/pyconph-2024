@@ -19,7 +19,7 @@
       {% for speaker in page.keynote_speakers.all %}
       <div class="flex w-full md:w-1/2 md:mx-10">
         <div class="keynote-img">
-          {% image speaker.display_photo original fill-200x200 %}
+          {% image speaker.display_photo original fill-1000x1000 %}
         </div>
         <p class="text-center text-32 text-white mb-10 pt-20">
         {{ speaker.first_name }} {{ speaker.last_name }}
