@@ -14,35 +14,25 @@
     </h3>
   </div>
 
-  <div class="">
-    <div class="slider1">
-      <div class="splide__track">
-        <ul class="splide__list">
-          {% for speaker in page.keynote_speakers.all %}
-          <li class="splide__slide">
-            {% image speaker.display_photo original %}
-            <p
-                class="text-center text-32 text-white mb-10 pt-20"
-                >
-                {{ speaker.first_name }} {{ speaker.last_name }}
-            </p>
-            <p
-                class="text-center text-24 text-white-80"
-                >
-                {{ speaker.title }}
-            </p>
-            <p
-                class="desc text-center text-16 text-white-80"
-                >
-                {{ speaker.introduction }}
-            </p>
-          </li>
-          {% endfor %}
-        </ul>
+  <div class="max-w-975 mx-auto">
+    <div class="keynote-container flex-col md:flex-row">
+      {% for speaker in page.keynote_speakers.all %}
+      <div class="flex w-full md:w-1/2 md:mx-10">
+        <div class="keynote-img">
+          {% image speaker.display_photo original fill-200x200 %}
+        </div>
+        <p class="text-center text-32 text-white mb-10 pt-20">
+        {{ speaker.first_name }} {{ speaker.last_name }}
+        </p>
+        <p class="text-center text-24 text-white-8">
+        {{ speaker.title }}
+        </p>
+        <p class="desc text-center text-16 text-white-80 md:mx-10">
+        {{ speaker.introduction }}
+        </p>
       </div>
+      {% endfor %}
     </div>
   </div>
 </div>
-
-  </div>
 
