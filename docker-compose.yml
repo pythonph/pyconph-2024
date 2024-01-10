@@ -13,7 +13,6 @@ services:
     links:
       - "postgres:pyconph-db"
 
-
   postgres:
     image: postgres:alpine
     env_file:
