@@ -15,33 +15,7 @@
         <p class="text-white text-16 text-center max-w-325 mx-auto">
             Message us at pycon@python.ph for questions and inquiries
         </p>
-        <ul class="flex justify-center mb-20">
-            <li>
-                <a href="https://pythonph.slack.com" class="no-underline" target="_blank">
-                    <img class="h-22 mr-18 hover:opacity-70" src="{% static 'img/icon/icon-slack.svg' %}" alt="slack" />
-                </a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com/pyconph" class="no-underline" target="_blank">
-                    <img class="h-22 mr-18 hover:opacity-70" src="{% static 'img/icon/icon-facebook.svg' %}" alt="facebook" />
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/pythonph" class="no-underline" target="_blank">
-                    <img class="h-22 mr-18 hover:opacity-70" src="{% static 'img/icon/icon-github.svg' %}" alt="github" />
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/pyconph" class="no-underline" target="_blank">
-                    <img class="h-22 mr-18 hover:opacity-70" src="{% static 'img/icon/icon-twitter.svg' %}" alt="twitter" />
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/pythonph/" class="no-underline" target="_blank">
-                    <img class="h-24 hover:opacity-70" src="{% static 'img/icon/icon-instagram.svg' %}" alt="instagram" />
-                </a>
-            </li>
-        </ul>
+        {% include "socials.html" %}
         <p class="text-center text-14">
             This site is built using Django and Wagtail.
         </p>

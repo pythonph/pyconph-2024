@@ -129,7 +129,7 @@ h4 {
     display: inline-block;
     cursor: pointer;
 }
-  
+
 .tooltip .tooltip-box {
     display: none;
     position: absolute;
@@ -148,4 +148,15 @@ h4 {
 .tooltip:hover .tooltip-box {
     display: block;
     width: 400px;
+}
+
+/* Styles for the bullet contents */
+
+ul > li {
+    color: white !important;
+    list-style-type: "✦ ";
+}
+
+.no-bullet {
+    list-style-type: none !important;
 }
