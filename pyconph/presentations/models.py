@@ -66,6 +66,11 @@ class Schedule(Orderable, models.Model):
         DAY1 = ("day1", "1st Day")
         DAY2 = ("day2", "2nd Day")
 
+    class Tracks(models.TextChoices):
+        TRACK1 = ("track1", "Track 1")
+        TRACK2 = ("track2", "Track 2")
+        TRACK3 = ("track3", "Track 3")
+
     page = ParentalKey(
         "home.HomePage", related_name="schedules", on_delete=models.CASCADE
     )
@@ -75,6 +80,10 @@ class Schedule(Orderable, models.Model):
 
     day = models.CharField(
         choices=Days.choices,
+        max_length=16,
+    )
+    track = models.CharField(
+        choices=Tracks.choices,
         max_length=16,
     )
     time_start = models.TimeField()
@@ -93,6 +102,16 @@ class Schedule(Orderable, models.Model):
         start = self.time_start.strftime(fmt)
         end = self.time_end.strftime(fmt)
         return f"{start} - {end}"
+
+    @property
+    def start(self):
+        fmt = "%H:%M:%S"
+        return self.time_start.strftime(fmt)
+
+    @property
+    def end(self):
+        fmt = "%H:%M:%S"
+        return self.time_end.strftime(fmt)
 
 
 class Presentation(models.Model):
