@@ -263,51 +263,13 @@
                     <ul
                         class="md:columns-2 list-disc px-20 md:px-40 gap-45"
                     >
+                        {% for topic in page.content_topics %}
                         <li
-                            class="text-16 text-white-80 px-10 py-5 break-words"
+                            class="text-16 text-white-80 px-10 py-7 break-words topic-bullet"
                         >
-                            Beginner & General Programming
+                            {{ topic }}
                         </li>
-                        <li
-                            class="text-16 text-white-80 px-10 py-5 break-words"
-                        >
-                            Backend/DevOps
-                        </li>
-                        <li
-                            class="text-16 text-white-80 px-10 py-5 break-words"
-                        >
-                            Machine Learning & Artificial Intelligence
-                        </li>
-                        <li
-                            class="text-16 text-white-80 px-10 py-5 break-words"
-                        >
-                            Distributed Computing
-                        </li>
-                        <li
-                            class="text-16 text-white-80 px-10 py-5 break-words"
-                        >
-                            Personal & Professional Development
-                        </li>
-                        <li
-                            class="text-16 text-white-80 px-10 py-5 break-words"
-                        >
-                            Platform/Framework/Architecture, Security
-                        </li>
-                        <li
-                            class="text-16 text-white-80 px-10 py-5 break-words"
-                        >
-                            Data Science/Analysis/Engineering
-                        </li>
-                        <li
-                            class="text-16 text-white-80 px-10 py-5 break-words"
-                        >
-                            Web/Mobile
-                        </li>
-                        <li
-                            class="text-16 text-white-80 px-10 py-5 break-words"
-                        >
-                            Practices
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
