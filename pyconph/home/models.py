@@ -148,6 +148,20 @@ class HomePage(Page):
     def day2_date(self):
         return self.date_end.strftime("%B %d")
 
+    @property
+    def content_topics(self):
+        return (
+            "Beginner & General Programming",
+            "Backend / DevOps",
+            "Machine Learning & Artificial Intelligence",
+            "Distributed Computing",
+            "Personal & Professional Development",
+            "Platform / Framework / Architecture / Security",
+            "Data Science / Analysis / Engineering",
+            "Web / Mobile",
+            "Practices",
+        )
+
     def keynote_speakers(self):
         return Speaker.objects.filter(
             is_featured=True,

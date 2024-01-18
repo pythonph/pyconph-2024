@@ -152,11 +152,25 @@ h4 {
 
 /* Styles for the bullet contents */
 
+ul {
+    margin-left: 1em;
+}
+
 ul > li {
-    color: white !important;
-    list-style-type: "✦ ";
+    color: hsla(0,0%,100%,.8) !important;
+    list-style-type: "✦  ";
+    margin-left: 2rem;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
 }
 
 .no-bullet {
     list-style-type: none !important;
+    margin-left: unset !important;
+    margin-bottom: unset !important;
+}
+
+.topic-bullet {
+    margin-left: unset !important;
+    margin-bottom: unset !important;
 }
