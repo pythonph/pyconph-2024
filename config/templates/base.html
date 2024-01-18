@@ -38,6 +38,8 @@
         {% block extra_css %}
         {# Override this in templates to add extra stylesheets #}
         {% endblock %}
+
+        <script src="{% static 'js/daypilot-all.min.js' %}"></script>
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
