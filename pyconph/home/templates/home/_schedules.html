@@ -1,6 +1,5 @@
 {% load static %}
 
-
 <div class="relative pb-150 md:pb-300" id="program-schedule">
     <div class="max-w-975 mx-auto px-25 lg:px-0">
         <p class="font-baybayinsisil text-20 md:text-24 text-yellow">
@@ -47,6 +46,7 @@
   const config = {
     startDate: "2024-02-25",
     viewType: "Resources",
+    theme: "calendar_blue",
     businessBeginsHour: 8,
     cellHeight: 50,
     timeRangeSelectedHandling: "Disabled",
@@ -54,10 +54,25 @@
     eventResizeHandling: "Disabled",
     eventClickHandling: "Disabled",
     columns: [
-      {name: "Track 1", id: "track1"},
-      {name: "Track 2", id: "track2"},
-      {name: "Track 3", id: "track3"},
+      {name: "[Track 1] Ayala Banquet", id: "track1", "image": "{% static 'img/function/ayala.jpg' %}"},
+      {name: "[Track 2] Magallanes", id: "track2", "image": "{% static 'img/function/magallanes.jpg' %}"},
+      {name: "[Track 3] Bel Air", id: "track3", "image": "{% static 'img/function/belair.jpg' %}"},
     ],
+    headerHeight: 90,
+    onBeforeHeaderRender: args => {
+      args.header.verticalAlignment = "top";
+      args.header.areas = [
+        {
+          left: "calc(50% - 30px)",
+          bottom: 5,
+          width: 60,
+          height: 60,
+          fontColor: "#999999",
+          image: args.column.data.image,
+          style: "box-sizing: border-box; border-radius: 50%; border: 3px solid #ffffff; overflow: hidden;",
+        }
+      ];
+    }
   };
   const dp1 = new DayPilot.Calendar("dp1", { startDate: "2024-02-25", ...config });
   const dp2 = new DayPilot.Calendar("dp2", { startDate: "2024-02-26", ...config });
