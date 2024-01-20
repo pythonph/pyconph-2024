@@ -69,21 +69,6 @@ h4 {
   border-radius: 50%;
 }
 
-.speaker .splide__arrows {
-    display: none !important;
-}
-
-.speaker .splide__slide--clone {
-    display: none !important;
-}
-
-.speaker:hover {
-    pointer-events: none !important;
-}
-
-.speaker {
-    pointer-events: none !important;
-}
 .overflow-y-hidden {
     overflow-y: hidden;
 }
@@ -104,14 +89,6 @@ h4 {
 
 .bg-img-3 {
     background-position: bottom !important;
-}
-
-.splide__arrows {
-    display: none !important;
-}
-
-.splide__slide--clone {
-    display: none !important;
 }
 
 .keynote:hover {
