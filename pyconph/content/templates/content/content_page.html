@@ -40,8 +40,13 @@ p {
                 {{ page.content_subtitle }}
             </h2>
             {% endif %}
+            {% if page.content_title == 'Makati DIY Walking Tour' %}
+                <div class="mt-6" >
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1hs0PvTJet8BTrHQPa1o2iOb-neg7_ss&hl=en&ehbc=2E312F" width="100%" height="480"></iframe> 
+                </div>
+            {% endif %}
             <p>
-            {{ page.content_body|richtext }}
+                {{ page.content_body|richtext }}
             </p>
         </div>
     </div>
