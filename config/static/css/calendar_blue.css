@@ -10,7 +10,7 @@
     --color-vertical-line-cell: #eeeeee;
     --color-event-background: #419FE0a2;
     --color-event-border: #47afff;
-    --color-event-bar: #1066a8;
+    --color-event-bar: rgb(253 214 73/var(--tw-bg-opacity));
     --color-event-bar-background: transparent;
     --color-event-text: #444444;
     --width-vertical-line: 4px;

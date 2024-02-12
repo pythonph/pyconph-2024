@@ -8,6 +8,12 @@
         <h2 class="font-medium text-48 md:text-80 text-white mb-20">
             Program Schedule
         </h2>
+        <p class="text-16 text-white-80 md:text-white">
+          Note: This is a working schedule and is subject to change. Please check back regularly for updates and final confirmations.
+          You may also refer to the <a class="text-yellow" href="/talks">Talks, Workshops & Panel Sessions Page</a> for more details.
+        </p>
+    </div>
+    <div class="max-w-full md:px-25">
         <div class="py-32">
             <div class="bg-blue-1 pt-10 sticky top-0">
                 <div class="tab flex items-center justify-start ux">
@@ -31,10 +37,6 @@
                 </div>
             </div>
         </div>
-
-        <p class="text-16 text-white-80 md:text-white">
-            Note: This is a working schedule and is subject to change. Please check back regularly for updates and final confirmations.
-        </p>
     </div>
     <div class="absolute left-96 -top-225 hidden md:block">
         <img class="star" src="{% static 'img/constellation-8.svg' %}" alt="constellation" />
@@ -46,8 +48,10 @@
   const config = {
     viewType: "Resources",
     theme: "calendar_blue",
+    allowEventOverlap: false,
+    cellHeight: 80,
+    cellDuration: 5,
     businessBeginsHour: 8,
-    cellHeight: 50,
     timeRangeSelectedHandling: "Disabled",
     eventMoveHandling: "Disabled",
     eventResizeHandling: "Disabled",
