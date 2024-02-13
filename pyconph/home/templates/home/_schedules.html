@@ -91,7 +91,7 @@
             end: "2024-02-25T{{ event.end }}",
             resource: "{{ event.track }}",
             id: DayPilot.guid(),
-            text: "{{ event.name }}"
+              text: "{{ event.name }}{% if event.speaker %} by {{ event.speaker }}{% endif %}\n{{ event.time }}"
           },
         {% endfor %}
       ];
