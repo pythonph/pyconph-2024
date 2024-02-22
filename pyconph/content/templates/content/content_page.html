@@ -45,6 +45,9 @@ p {
                     <iframe src="https://www.google.com/maps/d/embed?mid=1hs0PvTJet8BTrHQPa1o2iOb-neg7_ss&hl=en&ehbc=2E312F" width="100%" height="480"></iframe> 
                 </div>
             {% endif %}
+            {% if page.url == '/talks/' %}
+              <img src="https://raw.githubusercontent.com/pythonph/pyconph-2024/main/pyconph/home/static/pyconph2024_program.png" class="w-full" alt="Talks" />
+            {% endif %}
             <p>
                 {{ page.content_body|richtext }}
             </p>
